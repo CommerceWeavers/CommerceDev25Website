@@ -1,0 +1,49 @@
+---
+import Button from './Button.astro';
+import MobileMenu from './MobileMenu.astro';
+---
+
+<MobileMenu />
+<div class="container mx-auto px-8 md:mb-16">
+    <div class="relative py-10 md:py-24">
+        <div class="text-2xl md:text-4xl 2xl:text-5xl mb-8 xxl:mb-14">
+            44 <span class="text-yellow-200">d <span class="font-extralight">/</span> </span>
+            22 <span class="text-yellow-200">h <span class="font-extralight">/</span> </span>
+            45 <span class="text-yellow-200">m </span>
+        </div>
+        <div class="text-5xl md:text-7xl 2xl:text-8xl mb-4">CRAFT THE FUTURE <br />OF E-COMMERCE</div>
+        <div class="mb-10 md:mb-16">22.10.2025  <span class="text-yellow-200">/ MTP  POZNAŃ  PL</span></div>
+        <Button href="buy" variant="primary">Buy Tickets</Button>
+        <div class="hero-border"></div>
+    </div>
+</div>
+
+<style>
+    .hero-border {
+        position: absolute;
+        bottom: 0;
+        right: -4rem;
+        z-index: -1;
+        width: calc(100% + 16rem);
+        height: 100%;
+        border-radius: var(--radius-3xl);
+    }
+
+    .hero-border {
+        border: 1px solid #0000;
+        background: linear-gradient(black, black) padding-box, linear-gradient(var(--angle), black, var(--color-yellow-200)) border-box;
+        animation: 8s rotate linear infinite;
+    }
+
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+</style>

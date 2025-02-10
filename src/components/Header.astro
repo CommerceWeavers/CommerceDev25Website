@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import cdLogo from '../assets/commerce-dev-logo.svg';
+import Button from './Button.astro';
+---
+
+<div class="flex container mx-auto mt-16 mb-14 px-8">
+    <div class="logo-wrapper">
+        <a href="/">
+            <Image src={cdLogo} alt="commerce_dev" style="width: 100%;" />
+        </a>
+    </div>
+
+    <div class="hidden md:flex gap-4 lg:gap-12 items-center justify-end grow text-sm md:text-md xl:text-lg uppercase">
+        <a class="link-anim" href="#idea">Idea</a>
+        <a class="link-anim" href="#sponsors">Sponsors</a>
+        <a class="link-anim" href="#organizers">Organizers</a>
+        <Button href="#buy" variant="primary-outline">Buy Tickets</Button>
+    </div>
+</div>
+
+<style>
+    .logo-wrapper {
+        width: 15vw;
+        max-width: 300px;
+        min-width: 200px;
+    }
+</style>

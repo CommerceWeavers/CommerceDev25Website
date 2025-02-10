@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import open from '../assets/open.png';
+---
+
+<div class="container mx-auto px-2 md:px-8 md:mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 md:gap-4">
+        <div class="lg:row-span-2 bg-[#131310] py-8 md:py-12 px-8 md:rounded-tl-4xl md:rounded-bl-4xl flex flex-col">
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">20</div>
+            <div class="text-xl font-light grow">nowych sklepów internetowych w PL otwiera się średnio dziennie</div>
+            <div><Image class="hidden lg:block" src={open} alt="commerce_dev" /></div>
+        </div>
+
+        <div class="bg-[#10100D] md:aspect-1/1 py-8 md:py-12 px-8">
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">8mln</div>
+            <div class="text-xl font-light">średni roczny przychód polskiego e-commerce'a</div>
+        </div>
+
+        <div class="lg:col-span-2 shape py-8 md:py-12 px-8">
+            <div class="text-4xl md:text-6xl text-black mb-3 md:mb-6">70k</div>
+            <div class="text-xl text-black font-light max-w-80">szacunkowa liczba wszystkich zarejestrowanych w KRS e-commerce'ów w PL</div>
+        </div>
+
+        <div class="bg-[#20201A] md:aspect-1/1 py-8 md:py-12 px-8">
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">2</div>
+            <div class="text-xl font-light">average number of developers maintaining a store</div>
+        </div>
+
+        <div class="bg-[#10100D] md:aspect-1/1 py-8 md:py-12 px-8">
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">??</div>
+            <div class="text-xl font-light">e-commerce developers w Polsce</div>
+        </div>
+
+        <div class="bg-[#20201A] md:aspect-1/1 py-8 md:py-12 px-8 md:rounded-br-4xl">
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">400+</div>
+            <div class="text-xl font-light">fintechów Polsce</div>
+        </div>
+    </div>
+</div>
