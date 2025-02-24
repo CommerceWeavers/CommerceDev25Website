@@ -1,22 +1,29 @@
 ---
 import Button from './Button.astro';
 import MobileMenu from './MobileMenu.astro';
+import { Image } from 'astro:assets';
+import hero from '../assets/commerce-logos.png';
 ---
 
 <MobileMenu />
 <div class="container mx-auto px-8 md:mb-16">
     <div class="relative py-10 md:py-24">
-        <div class="text-2xl md:text-4xl 2xl:text-5xl mb-8 xxl:mb-14">
-            44 <span class="text-yellow-200">d <span class="font-extralight">/</span> </span>
-            22 <span class="text-yellow-200">h <span class="font-extralight">/</span> </span>
-            45 <span class="text-yellow-200">m </span>
+        <div id="countdown" class="text-2xl md:text-4xl 2xl:text-5xl mb-8 xxl:mb-14">
+            <div class="text-2xl md:text-4xl 2xl:text-5xl mb-8 xxl:mb-14">
+                00 <span class="text-yellow-200">d <span class="font-extralight">/</span> </span>
+                00 <span class="text-yellow-200">h <span class="font-extralight">/</span> </span>
+                00 <span class="text-yellow-200">m </span>
+            </div>
         </div>
-        <div class="text-5xl md:text-7xl 2xl:text-8xl mb-4">CRAFT THE FUTURE <br />OF E-COMMERCE</div>
-        <div class="mb-10 md:mb-16">22.10.2025  <span class="text-yellow-200">/ MTP  POZNAŃ  PL</span></div>
-        <Button href="buy" variant="primary">Buy Tickets</Button>
+        <div class="text-5xl md:text-7xl 2xl:text-7xl mb-4 uppercase max-w-2xl">A PLACE TO BE FOR ALL E-COMMERCE ENGINEERS</div>
+        <div class="mb-10 md:mb-16">23.05.2025  <span class="text-yellow-200">/ MTP  POZNAŃ  PL</span></div>
+        <Button href="#" variant="primary" disabled={true}>Kup bilet<span class="text-xs pl-2">wkrótce</span></Button>
         <div class="hero-border"></div>
+        <div class="hero-img hidden xl:block"><Image src={hero} alt="commerce_dev" /></div>
     </div>
 </div>
+
+<script src="../scripts/countdown.js"></script>
 
 <style>
     .hero-border {
@@ -45,5 +52,12 @@ import MobileMenu from './MobileMenu.astro';
         syntax: "<angle>";
         initial-value: 0deg;
         inherits: false;
+    }
+
+    .hero-img {
+        position: absolute;
+        top: -1vw;
+        right: -7vw;
+        width: 50%;
     }
 </style>
