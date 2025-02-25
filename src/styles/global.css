@@ -20,8 +20,8 @@
     @font-face {
         font-family: 'Nohemi';
         src:
-            url('../public/fonts/Nohemi-VF.ttf') format('woff2 supports variations'),
-            url('../public/fonts/Nohemi-VF.ttf') format('woff-variations');
+            url('../fonts/Nohemi-VF.ttf') format('woff2 supports variations'),
+            url('../fonts/Nohemi-VF.ttf') format('woff-variations');
         font-weight: 100 900;
         font-style: normal;
         font-display: swap;
