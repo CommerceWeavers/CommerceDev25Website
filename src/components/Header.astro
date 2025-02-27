@@ -2,27 +2,45 @@
 import { Image } from 'astro:assets';
 import cdLogo from '../assets/commerce-dev-logo.svg';
 import Button from './Button.astro';
+
+const currentLang = Astro.url.pathname.split('/')[1] == 'en' ? 'en' : 'pl';
+let str;
+if (currentLang === 'en') {
+    str = await import('../content/en/strings.md');
+} else {
+    str = await import('../content/pl/strings.md');
+}
 ---
 
 <div class="flex container mx-auto mt-16 mb-14 px-8">
     <div class="logo-wrapper">
-        <a href="/">
-            <Image src={cdLogo} alt="commerce_dev" style="width: 100%;" />
-        </a>
+        <a href="/"><Image src={cdLogo} alt="commerce_dev" style="width: 100%;" /></a>
+        <div class="lang-change"><a class="link-anim uppercase" href={'/' + (currentLang == 'en' ? '' : 'en')}>{currentLang == 'en' ? 'PL' : 'EN'}</a></div>
     </div>
 
     <div class="hidden md:flex gap-4 lg:gap-12 items-center justify-end grow text-sm md:text-md xl:text-lg uppercase">
-        <a class="link-anim" href="#idea">Idea</a>
-        <a class="link-anim" href="#sponsors">Sponsorzy</a>
-        <a class="link-anim" href="#organizers">Organizatorzy</a>
-        <Button href="#buy" variant="primary-outline" disabled={true}>Kup bilet<span class="text-xs pl-2">wkrótce</span></Button>
+        <a class="link-anim" href="#idea">{str.frontmatter.idea}</a>
+        <a class="link-anim" href="#sponsors">{str.frontmatter.sponsors}</a>
+        <a class="link-anim" href="#organizers">{str.frontmatter.organizers}</a>
+        <Button href="#buy" variant="primary-outline" disabled={true}>
+            {str.frontmatter.buy_ticket}
+            <span class="text-xs pl-2">{str.frontmatter.soon}</span>
+        </Button>
     </div>
 </div>
 
 <style>
     .logo-wrapper {
+        position: relative;
         width: 15vw;
         max-width: 300px;
         min-width: 200px;
+    }
+
+    .lang-change {
+        position: absolute;
+        top: 50%;
+        right: -3rem;
+        transform: translateY(-50%);
     }
 </style>

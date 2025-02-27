@@ -1,12 +1,20 @@
 ---
 import { Image } from 'astro:assets';
 import cdLogo from '../assets/commerce-dev-logo-hor.svg';
+
+const currentLang = Astro.url.pathname.split('/')[1] == 'en' ? 'en' : 'pl';
+let str;
+if (currentLang === 'en') {
+    str = await import('../content/en/strings.md');
+} else {
+    str = await import('../content/pl/strings.md');
+}
 ---
 
 <div class="container mx-auto mt-16 mb-14 px-8 flex flex-wrap justify-center gap-2 md:gap-x-10">
-    <a class="link-anim" href="#idea">Idea</a>
-    <a class="link-anim" href="#sponsors">Sponsorzy</a>
-    <a class="link-anim" href="#organizers">Organizatorzy</a>
+    <a class="link-anim" href="#idea">{str.frontmatter.idea}</a>
+    <a class="link-anim" href="#sponsors">{str.frontmatter.sponsors}</a>
+    <a class="link-anim" href="#organizers">{str.frontmatter.organizers}</a>
 </div>
 
 <div class="container mx-auto mt-16 mb-14 px-8 md:grid grid-cols-10 gap-4">

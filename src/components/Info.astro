@@ -1,13 +1,21 @@
 ---
 import Button from './Button.astro';
+
+const currentLang = Astro.url.pathname.split('/')[1] == 'en' ? 'en' : 'pl';
+let str;
+if (currentLang === 'en') {
+    str = await import('../content/en/strings.md');
+} else {
+    str = await import('../content/pl/strings.md');
+}
 ---
 
 <div class="container mx-auto px-8 mb-16 lg:mb-30 pt-16">
     <div class="md:grid grid-cols-8">
         <div class="col-span-3 mb-12">
-            <h2 class="text-4xl text-yellow-200 uppercase mb-12">Co znajdziesz w agendzie?</h2>
-            <div class="mb-16 text-3xl text-balance">Prelekcje i panele dyskusyjne prowadzone przez ekspertów, architektów i maintainerów najbardziej rozpoznawalnych rozwiązań w e-commerce:</div>
-            <Button href="#buy" variant="primary" disabled={true}>Kup bilet<span class="text-xs pl-2">wkrótce</span></Button>
+            <h2 class="text-4xl text-yellow-200 uppercase mb-12"></h2>
+            <div class="mb-16 text-3xl text-balance">{str.frontmatter.info_2}</div>
+            <Button href="#buy" variant="primary" disabled={true}>{str.frontmatter.buy_ticket}<span class="text-xs pl-2">{str.frontmatter.soon}</span></Button>
         </div>
         <div class="col-span-4 col-start-5 text-balance"> 
 
@@ -18,7 +26,7 @@ import Button from './Button.astro';
                     </svg>
                 </div>
                 <div class="grow-1">
-                    Platformy open-source: Magento, Hyvä, OpenMage, Mage-OS, OroCommerce, PrestaShop, WooCommerce, Shopware, Sylius, Ibexa
+                    {str.frontmatter.info_list_1}
                 </div>
             </div>
 
@@ -29,7 +37,7 @@ import Button from './Button.astro';
                     </svg>
                 </div>
                 <div class="grow-1">
-                    Polskie SaaSy: Shoper, IdoSell, IAI Systems, _Stores
+                    {str.frontmatter.info_list_2}
                 </div>
             </div>
 
@@ -40,7 +48,7 @@ import Button from './Button.astro';
                     </svg>
                 </div>
                 <div class="grow-1">
-                    Międzynarodowe SaaSy: Shopify, BigCommerce
+                    {str.frontmatter.info_list_3}
                 </div>
             </div>
 
@@ -51,7 +59,7 @@ import Button from './Button.astro';
                     </svg>
                 </div>
                 <div class="grow-1">
-                    DXP i enterprise: VTEX, Adobe Commerce, Salesforce, SAP Hybris, commercetools, Spryker, HTC, Oracle
+                    {str.frontmatter.info_list_4}
                 </div>
             </div>
 
@@ -62,7 +70,7 @@ import Button from './Button.astro';
                     </svg>
                 </div>
                 <div class="grow-1">
-                    Customowe rozwiązania: autorskie silniki tworzone przez uznane agencje i indywidualne wdrożenia
+                    {str.frontmatter.info_list_5}
                 </div>
             </div>
         </div>

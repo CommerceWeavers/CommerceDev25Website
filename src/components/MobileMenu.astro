@@ -1,3 +1,13 @@
+---
+const currentLang = Astro.url.pathname.split('/')[1] == 'en' ? 'en' : 'pl';
+let str;
+if (currentLang === 'en') {
+    str = await import('../content/en/strings.md');
+} else {
+    str = await import('../content/pl/strings.md');
+}
+---
+
 <input type="checkbox" id="main-navigation-toggle" class="md:hidden btn btn--close" title="Toggle main navigation" />
 <label for="main-navigation-toggle" class="md:hidden">
     <span></span>
@@ -5,17 +15,17 @@
 <nav id="main-navigation" class="md:hidden nav-main">
     <ul class="menu">
         <li class="menu__item">
-            <a class="menu__link stat" href="#idea">Idea</a>
+            <a class="menu__link stat" href="#idea">{str.frontmatter.idea}</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link stat" href="#sponsors">Sponsors</a>
+            <a class="menu__link stat" href="#sponsors">{str.frontmatter.sponsors}</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link stat" href="#organizers">Organizers</a>
+            <a class="menu__link stat" href="#organizers">{str.frontmatter.organizers}</a>
         </li>
-        <li class="menu__item">
-            <a class="menu__link stat" href="#buy">Buy ticket</a>
-        </li>
+        <!-- <li class="menu__item">
+            <a class="menu__link stat" href="#buy">{str.frontmatter.buy_ticket}</a>
+        </li> -->
     </ul>
 </nav>
 <style>

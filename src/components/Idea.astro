@@ -1,21 +1,31 @@
+---
+const currentLang = Astro.url.pathname.split('/')[1] == 'en' ? 'en' : 'pl';
+let str;
+if (currentLang === 'en') {
+    str = await import('../content/en/strings.md');
+} else {
+    str = await import('../content/pl/strings.md');
+}
+---
+
 <div id="idea" class="container mx-auto px-8 md:mb-16 pt-16">
-    <h2 class="text-4xl text-yellow-200 uppercase mb-12">Idea</h2>
+    <h2 class="text-4xl text-yellow-200 uppercase mb-12">{str.frontmatter.idea_header}</h2>
 
     <div class="md:grid grid-cols-8 mb-6">
         <div class="col-span-3 mb-12">
-            <div class="text-3xl text-balance mb-5">COMMERCE_DEV to pierwsza konferencja w pełni dedykowana specjalistom IT w e-commerce, a nie handlowcom! </div>
+            <div class="text-3xl text-balance mb-5">{str.frontmatter.idea_1}</div>
         </div>
         <div class="col-span-4 col-start-5 text-balance"> 
-            <p class="mb-3">E-commerce rośnie w siłę, a razem z nim technologie, które go napędzają. Frameworki, języki, systemy – wybór jest ogromny, ale jedno pozostaje niezmienne: to programiści i architekci tworzą fundamenty cyfrowego handlu.</p>
-            <p class="mb-3">Wydarzenie przeznaczone jest właśnie dla nich, a także tech leadów, team leadów, product ownerów oraz project managerów.</p>
-            <p class="mb-3">COMMERCE_DEV to przestrzeń wymiany wiedzy i doświadczeń – niezależnie od frameworka czy języka programowania.</p>
+            <p class="mb-3">{str.frontmatter.idea_2}</p>
+            <p class="mb-3">{str.frontmatter.idea_3}</p>
+            <p class="mb-3">{str.frontmatter.idea_4}</p>
         </div>
     </div>
 
     <div class="bg-[#131310] py-10 md:py-16 px-6 md:px-16 rounded-4xl">
-        <div class="mb-4">Nasza dewiza to</div>
+        <div class="mb-4">{str.frontmatter.dewiza}</div>
         <div class="text-xl sm:text-3xl md:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-yellow-200 uppercase">
-            NO SALES BULLSHIT, NO MARKETING BINGO. 😈JUST PURE TECH KNOW-HOW.
+            {str.frontmatter.no_sales_bull}
         </div>
     </div>
 </div>

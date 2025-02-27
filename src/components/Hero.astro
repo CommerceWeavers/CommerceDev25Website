@@ -3,6 +3,14 @@ import Button from './Button.astro';
 import MobileMenu from './MobileMenu.astro';
 import { Image } from 'astro:assets';
 import hero from '../assets/commerce-logos.png';
+
+const currentLang = Astro.url.pathname.split('/')[1] == 'en' ? 'en' : 'pl';
+let str;
+if (currentLang === 'en') {
+    str = await import('../content/en/strings.md');
+} else {
+    str = await import('../content/pl/strings.md');
+}
 ---
 
 <MobileMenu />
@@ -15,9 +23,9 @@ import hero from '../assets/commerce-logos.png';
                 00 <span class="text-yellow-200">m </span>
             </div>
         </div>
-        <div class="text-5xl md:text-7xl 2xl:text-7xl mb-4 uppercase max-w-2xl">A PLACE TO BE FOR ALL E-COMMERCE ENGINEERS</div>
+        <div class="text-5xl md:text-7xl 2xl:text-7xl mb-4 uppercase max-w-2xl">{str.frontmatter.slogan}</div>
         <div class="mb-10 md:mb-16">23.05.2025  <span class="text-yellow-200">/ MTP  POZNAŃ  PL</span></div>
-        <Button href="#" variant="primary" disabled={true}>Kup bilet<span class="text-xs pl-2">wkrótce</span></Button>
+        <Button href="#" variant="primary" disabled={true}>{str.frontmatter.buy_ticket}<span class="text-xs pl-2">{str.frontmatter.soon}</span></Button>
         <div class="hero-border"></div>
         <div class="hero-img hidden xl:block"><Image src={hero} alt="commerce_dev" /></div>
     </div>

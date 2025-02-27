@@ -1,52 +1,60 @@
 ---
 import { Image } from 'astro:assets';
 import open from '../assets/open.png';
+
+const currentLang = Astro.url.pathname.split('/')[1] == 'en' ? 'en' : 'pl';
+let str;
+if (currentLang === 'en') {
+    str = await import('../content/en/strings.md');
+} else {
+    str = await import('../content/pl/strings.md');
+}
 ---
 
 <div class="container mx-auto px-2 md:px-8 md:mb-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 md:gap-4">
         <div class="lg:row-span-2 bg-[#131310] py-8 md:py-12 px-8 md:rounded-tl-4xl md:rounded-bl-4xl flex flex-col">
-            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">20</div>
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">{str.frontmatter.grid_stat_1}</div>
             <div class="text-xl font-light grow">
-                nowych sklepów internetowych w PL otwiera się średnio dziennie 
+                {str.frontmatter.grid_desc_1}
                 <a class="text-xs text-yellow-200" href="https://www.rp.pl/handel/art41041791-w-polsce-powstaje-20-nowych-sklepow-internetowych-dziennie" target="_blank">↗</a>
             </div>
             <div><Image class="hidden lg:block" src={open} alt="commerce_dev" /></div>
         </div>
 
         <div class="bg-[#10100D] md:aspect-1/1 py-8 md:py-12 px-8">
-            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">8 mln</div>
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">{str.frontmatter.grid_stat_2}</div>
             <div class="text-xl font-light">
-                średni roczny przychód polskiego e-commerce'a
+                {str.frontmatter.grid_desc_2}
                 <a class="text-xs text-yellow-200" href="https://pap-mediaroom.pl/biznes-i-finanse/w-polsce-rejestrowanych-jest-srednio-20-nowych-sklepow-internetowych-dziennie" target="_blank">↗</a>
             </div>
         </div>
 
         <div class="lg:col-span-2 shape py-8 md:py-12 px-8">
-            <div class="text-4xl md:text-6xl text-black mb-3 md:mb-6">92 miliardy</div>
+            <div class="text-4xl md:text-6xl text-black mb-3 md:mb-6">{str.frontmatter.grid_stat_3}</div>
             <div class="text-xl text-black font-light max-w-96">
-                wartość polskiego rynku e-commerce. Co czyni go jednym z najszybciej rozwijających się w Europie
+                {str.frontmatter.grid_desc_3}
                 <a class="text-xs" href="https://edrone.me/pl/blog/statystyki-e-commerce-polska" target="_blank">↗</a>
             </div>
         </div>
 
         <div class="bg-[#20201A] md:aspect-1/1 py-8 md:py-12 px-8">
-            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">50%</div>
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">{str.frontmatter.grid_stat_4}</div>
             <div class="text-xl font-light">
-                do 2028 e-commerce prawdopodobnie przekroczy 50% sprzedaży w PL
+                {str.frontmatter.grid_desc_4}
                 <a class="text-xs text-yellow-200" href="https://www.trade.gov.pl/wiedza/polski-rynek-e-commerce-w-latach-2024-2028" target="_blank">↗</a>
             </div>
         </div>
 
         <div class="bg-[#10100D] md:aspect-1/1 py-8 md:py-12 px-8">
-            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">46%</div>
-            <div class="text-xl font-light">PL to drugi najszybciej rosnący rynek e-commerce w Europie i lider w Europie Środkowo-Wschodniej</div>
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">{str.frontmatter.grid_stat_5}</div>
+            <div class="text-xl font-light">{str.frontmatter.grid_desc_5}</div>
             <a class="text-xs text-yellow-200" href="https://akademia.pit.lukasiewicz.gov.pl/ciekawostki-ze-swiata-e-commerce" target="_blank">↗</a>
         </div>
 
         <div class="bg-[#20201A] md:aspect-1/1 py-8 md:py-12 px-8 md:rounded-br-4xl">
-            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">400+</div>
-            <div class="text-xl font-light">fintechów Polsce</div>
+            <div class="text-4xl md:text-6xl text-yellow-200 mb-3 md:mb-6">{str.frontmatter.grid_stat_6}</div>
+            <div class="text-xl font-light">{str.frontmatter.grid_desc_6}</div>
         </div>
     </div>
 </div>

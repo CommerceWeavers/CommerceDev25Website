@@ -1,11 +1,17 @@
 ---
-import Button from './Button.astro';
+const currentLang = Astro.url.pathname.split('/')[1] == 'en' ? 'en' : 'pl';
+let str;
+if (currentLang === 'en') {
+    str = await import('../content/en/strings.md');
+} else {
+    str = await import('../content/pl/strings.md');
+}
 ---
 
 <div class="container mx-auto mt-16 mb-14 px-2 md:px-8">
     <div class="shape py-10 md:py-24 transition-all px-8 rounded-4xl text-center text-black">
-        <h2 class="text-3xl md:text-4xl uppercase mb-6 uppercase">Zapisz się do newslettera</h2>
-        <div class="max-w-2xl mx-auto">Bądź na bieżąco z najnowszymi informacjami o konferencji, prelegentach i agendzie. Dołącz do naszego newslettera i otrzymuj ekskluzywne aktualizacje prosto na swoją skrzynkę!</div>
+        <h2 class="text-3xl md:text-4xl uppercase mb-6 uppercase">{str.frontmatter.newsletter_header}</h2>
+        <div class="max-w-2xl mx-auto">{str.frontmatter.newsletter_desc}</div>
         <div class="max-w-2xl mx-auto"><div class="ml-embedded" data-form="WCQ34O"></div></div>
     </div>
 </div>
