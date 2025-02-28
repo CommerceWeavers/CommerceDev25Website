@@ -6,7 +6,7 @@ contact: Kontakt
 buy_ticket: Kup bilet
 soon: wkrótce
 slogan: "A PLACE TO BE FOR ALL E-COMMERCE ENGINEERS"
-no_sales_bull: "NO SALES BULLSHIT, NO MARKETING BINGO. 😈JUST PURE TECH KNOW-HOW."
+no_sales_bull: "NO SALES BULLSHIT, NO MARKETING BINGO. 😈<br>JUST PURE TECH KNOW-HOW."
 
 idea_header: Idea
 idea_1: "COMMERCE_DEV to pierwsza konferencja w pełni dedykowana specjalistom IT w e-commerce, a nie handlowcom!"
@@ -45,8 +45,8 @@ partners_cta: "Zostań partnerem"
 your_logo: "TWOJE<br>LOGO"
 
 organizers_header: "Organizatorzy"
-organizers_kwaduck: '<a href="https://www.linkedin.com/company/kwakduck" class="text-yellow-200 underline underline-offset-4" target="_blank">KwakDuck</a> - ekipa odpowiedzialna za organizację 8 ostatnich edycji PHPers Summit, największej konferencji dla programistów PHP w Polsce, co roku goszczącej ok. 1000 uczestników.'
-organizers_weavers: '<a href="https://www.commerceweavers.com" class="text-yellow-200 underline underline-offset-4" target="_blank">Commerce Weavers</a> - agencja e-commerce prowadzona przez byłych członków core team Syliusa, współorganizująca Summit w ostatnich 3 latach, m.in.  jako Partner Technologiczny.'
+organizers_kwaduck: '<span class="text-yellow-200">KwakDuck</span> - ekipa odpowiedzialna za organizację 8 ostatnich edycji PHPers Summit, największej konferencji dla programistów PHP w Polsce, co roku goszczącej ok. 1000 uczestników.'
+organizers_weavers: '<span class="text-yellow-200">Commerce Weavers</span> - agencja e-commerce prowadzona przez byłych członków core team Syliusa, współorganizująca Summit w ostatnich 3 latach, m.in.  jako Partner Technologiczny.'
 
 newsletter_header: "Zapisz się do newslettera"
 newsletter_desc: "Bądź na bieżąco z najnowszymi informacjami o konferencji, prelegentach i agendzie. Dołącz do naszego newslettera i otrzymuj ekskluzywne aktualizacje prosto na swoją skrzynkę!"
