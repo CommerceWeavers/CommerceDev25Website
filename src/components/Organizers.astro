@@ -21,7 +21,7 @@ if (currentLang === 'en') {
                 <div class="diagonal-stripes grow"></div>
             </div>
             <div class="col-span-2 xl:py-12">
-                {str.frontmatter.organizers_kwaduck}
+                <div set:html={str.frontmatter.organizers_kwaduck}></div>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 rounded-4xl border-2 border-yellow-200 p-10 md:p-12">
@@ -30,7 +30,7 @@ if (currentLang === 'en') {
                 <Image class="m-auto" src={weaversLogo} alt="commerce weavers" />
             </div>
             <div class="col-span-2 xl:py-12">
-                {str.frontmatter.organizers_weavers}                
+                <div set:html={str.frontmatter.organizers_weavers}></div>
             </div>
         </div>
     </div>

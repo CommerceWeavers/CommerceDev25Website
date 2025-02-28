@@ -12,13 +12,13 @@ if (currentLang === 'en') {
     <div id="sponsors" class="md:order-1 pt-16">
         <h2 class="text-4xl uppercase mb-6">{str.frontmatter.sponsors_header}</h2>
         <div class="text-lg mb-8 text-neutral-400 max-w-[37rem]">
-            {str.frontmatter.sponsors_desc}
+            <div set:html={str.frontmatter.sponsors_desc}></div>
         </div>
     </div>
 
     <div class="md:order-3 grid lg:grid-cols-2 gap-4">
         <div class="hidden lg:flex justify-center items-center bg-[#161612] text-[#5F512C] rounded-4xl text-center">
-            {str.frontmatter.your_logo}
+            <div set:html={str.frontmatter.your_logo}></div>
         </div>
         <a href="mailto:contact@commerce-dev.com" class="flex flex-col justify-between shape py-10 md:py-12 md:hover:py-14 transition-all px-8 md:aspect-1/1 rounded-4xl gap-6">
             <div class="">
@@ -33,13 +33,13 @@ if (currentLang === 'en') {
     <div id="partners" class="md:order-2 pt-20 md:pt-16">
         <h2 class="text-4xl uppercase mb-6">{str.frontmatter.partners_header}</h2>
         <div class="text-lg mb-8 text-neutral-400 max-w-[37rem]">
-            {str.frontmatter.sponsors_desc}
+            <div set:html={str.frontmatter.partners_desc}></div>
         </div>
     </div>
 
     <div class="md:order-4 grid lg:grid-cols-2 gap-4">
         <div class="hidden lg:flex justify-center items-center bg-[#161612] text-[#5F512C] rounded-4xl text-center">
-            {str.frontmatter.your_logo}
+            <div set:html={str.frontmatter.your_logo}></div>
         </div>
         <a href="mailto:contact@commerce-dev.com" class="flex flex-col justify-between shape py-10 md:py-12 md:hover:py-14 transition-all px-8 md:aspect-1/1 rounded-4xl gap-6">
             <svg class="md:hidden" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
