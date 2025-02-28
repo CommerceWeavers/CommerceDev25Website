@@ -18,10 +18,11 @@ if (currentLang === 'en') {
         <div class="lang-change"><a class="link-anim uppercase" href={'/' + (currentLang == 'en' ? '' : 'en')}>{currentLang == 'en' ? 'PL' : 'EN'}</a></div>
     </div>
 
-    <div class="hidden md:flex gap-4 lg:gap-12 items-center justify-end grow text-sm md:text-md xl:text-lg uppercase">
+    <div class="hidden lg:flex gap-4 lg:gap-12 items-center justify-end grow text-sm md:text-md xl:text-lg uppercase">
         <a class="link-anim" href="#idea">{str.frontmatter.idea}</a>
         <a class="link-anim" href="#sponsors">{str.frontmatter.sponsors}</a>
         <a class="link-anim" href="#organizers">{str.frontmatter.organizers}</a>
+        <a class="link-anim" href="mailto:contact@commerce-dev.com">{str.frontmatter.contact}</a>
         <Button href="#buy" variant="primary-outline" disabled={true}>
             {str.frontmatter.buy_ticket}
             <span class="text-xs pl-2">{str.frontmatter.soon}</span>

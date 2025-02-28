@@ -2,6 +2,7 @@
 idea: Idea
 sponsors: Sponsorzy
 organizers: Organizatorzy
+contact: Kontakt
 buy_ticket: Kup bilet
 soon: wkrótce
 slogan: "A PLACE TO BE FOR ALL E-COMMERCE ENGINEERS"
@@ -36,10 +37,10 @@ grid_stat_6: "400+"
 grid_desc_6: "fintechów Polsce"
 
 sponsors_header: "Sponsorzy"
-sponsors_desc: "Zostań częścią wyjątkowego wydarzenia i zaprezentuj swoją markę przed najlepszymi specjalistami IT w e-commerce. Oferujemy wiele możliwości promocji – od obrandowanych stoisk po dedykowane wystąpienia. Skontaktuj się z nami, aby poznać szczegóły!"
+sponsors_desc: 'Zostań częścią wyjątkowego wydarzenia i zaprezentuj swoją markę przed najlepszymi specjalistami IT w e-commerce. Oferujemy wiele możliwości promocji – od obrandowanych stoisk po dedykowane wystąpienia. <a href="mailto:contact@commerce-dev.com" class="text-yellow-200 link-anim">Skontaktuj się z nami, aby poznać szczegóły!</a>'
 sponsors_cta: "Zostań sponsorem"
 partners_header: "Partnerzy"
-partners_desc: "Współpracujmy! Jeśli reprezentujesz organizację, społeczność technologiczną, media lub firmę, która chce wspierać rozwój technologii, dołącz do grona partnerów COMMERCE_DEV. Razem możemy stworzyć niezapomniane wydarzenie."
+partners_desc: '<a href="mailto:contact@commerce-dev.com" class="text-yellow-200 link-anim">Współpracujmy!</a> Jeśli reprezentujesz organizację, społeczność technologiczną, media lub firmę, która chce wspierać rozwój technologii, dołącz do grona partnerów COMMERCE_DEV. Razem możemy stworzyć niezapomniane wydarzenie.'
 partners_cta: "Zostań partnerem"
 your_logo: "TWOJE<br>LOGO"
 

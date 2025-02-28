@@ -2,6 +2,7 @@
 idea: Idea
 sponsors: Sponsors
 organizers: Organizers
+contact: Contact
 buy_ticket: Buy ticket
 soon: soon
 slogan: "A PLACE TO BE FOR ALL E-COMMERCE ENGINEERS"

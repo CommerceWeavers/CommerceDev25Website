@@ -9,7 +9,7 @@ if (currentLang === 'en') {
 ---
 
 <input type="checkbox" id="main-navigation-toggle" class="md:hidden btn btn--close" title="Toggle main navigation" />
-<label for="main-navigation-toggle" class="md:hidden">
+<label for="main-navigation-toggle" class="lg:hidden">
     <span></span>
 </label>
 <nav id="main-navigation" class="md:hidden nav-main">
@@ -22,6 +22,9 @@ if (currentLang === 'en') {
         </li>
         <li class="menu__item">
             <a class="menu__link stat" href="#organizers">{str.frontmatter.organizers}</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link stat" href="mailto:contact@commerce-dev.com">{str.frontmatter.contact}</a>
         </li>
         <!-- <li class="menu__item">
             <a class="menu__link stat" href="#buy">{str.frontmatter.buy_ticket}</a>
@@ -97,7 +100,7 @@ if (currentLang === 'en') {
         cursor: pointer;
         position: fixed;
         right: 1rem;
-        top: 3.35rem;
+        top: 4.5rem;
         z-index: 999;
     }
 
