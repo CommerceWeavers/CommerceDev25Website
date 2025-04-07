@@ -5,7 +5,7 @@ organizers: Organizers
 contact: Contact
 buy_ticket: Go to PHPers Day
 soon: soon
-slogan: "The <span class='text-yellow-200'>commerce_dev</span> conference has been canceled, but with equal enthusiasm, we invite you to <span class='text-[#00A5FF]'>PHPers Day</span>, which we are organizing in its place!"
+slogan: "The <span class='text-yellow-200'>commerce_dev</span> conference has been canceled. We invite you to <span class='text-[#00A5FF]'>PHPers Day</span>, which we are organizing in the same city!"
 no_sales_bull: "NO SALES BULLSHIT, NO MARKETING BINGO. <br>😈JUST PURE TECH KNOW-HOW."
 
 idea_header: Idea
