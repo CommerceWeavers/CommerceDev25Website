@@ -3,7 +3,7 @@ interface Props {
   href: string;
   target?: '_blank' | '_self' | '_parent' | '_top';
   class?: string;
-  variant?: 'primary' | 'primary-outline';
+  variant?: 'primary' | 'primary-outline' | 'phpers';
   disabled?: boolean;
 }
 
@@ -12,51 +12,78 @@ const { href, target, class: className, variant, disabled } = Astro.props;
 
 {variant == 'primary' ?
 <a
-  class={`group relative inline-flex items-center overflow-hidden rounded-md bg-yellow-200 px-8 py-3 text-black focus:ring-2 outline-hidden uppercase ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
-  href={href}
-  target={target}
-  {...(disabled && { 'aria-disabled': 'true', 'tabindex': '-1' })}
+    class={`group relative inline-flex items-center overflow-hidden rounded-md bg-yellow-200 px-8 py-3 text-black focus:ring-2 outline-hidden uppercase ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+    href={href}
+    target={target}
+    {...(disabled && { 'aria-disabled': 'true', 'tabindex': '-1' })}
 >
   <span class="absolute -end-full transition-all group-hover:end-4">
     <svg
-      class="size-5"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
+        class="size-5"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
     >
       <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M17 8l4 4m0 0l-4 4m4-4H3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M17 8l4 4m0 0l-4 4m4-4H3"
       />
     </svg>
   </span>
 
   <span class="text-base font-medium transition-all group-hover:me-4"> <slot/> </span>
 </a>
-: ''}
-{variant == 'primary-outline' ?
+    : ''}
+{variant == 'phpers' ?
 <a
-  class={`group relative inline-flex items-center overflow-hidden rounded-md border border-current px-8 py-3 text-yellow-200 focus:ring-2 outline-hidden uppercase ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
-  href={href}
-  target={target}
-  {...(disabled && { 'aria-disabled': 'true', 'tabindex': '-1' })}
+    class={`group relative inline-flex items-center overflow-hidden rounded-md bg-[#00A5FF] px-8 py-3 text-white focus:ring-2 outline-hidden uppercase ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+    href={href}
+    target={target}
+    {...(disabled && { 'aria-disabled': 'true', 'tabindex': '-1' })}
 >
   <span class="absolute -end-full transition-all group-hover:end-4">
     <svg
-      class="size-5"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
+        class="size-5"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
     >
       <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M17 8l4 4m0 0l-4 4m4-4H3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M17 8l4 4m0 0l-4 4m4-4H3"
+      />
+    </svg>
+  </span>
+
+  <span class="text-base font-medium transition-all group-hover:me-4"> <slot/> </span>
+</a>
+    : ''}
+{variant == 'primary-outline' ?
+<a
+    class={`group relative inline-flex items-center overflow-hidden rounded-md border border-current px-8 py-3 text-yellow-200 focus:ring-2 outline-hidden uppercase ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+    href={href}
+    target={target}
+    {...(disabled && { 'aria-disabled': 'true', 'tabindex': '-1' })}
+>
+  <span class="absolute -end-full transition-all group-hover:end-4">
+    <svg
+        class="size-5"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+    >
+      <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M17 8l4 4m0 0l-4 4m4-4H3"
       />
     </svg>
   </span>

@@ -3,9 +3,9 @@ idea: Idea
 sponsors: Sponsorzy
 organizers: Organizatorzy
 contact: Kontakt
-buy_ticket: Kup bilet
+buy_ticket: Przejdź na PHPers Day
 soon: wkrótce
-slogan: "A PLACE TO BE FOR ALL E-COMMERCE ENGINEERS"
+slogan: "Konferencja <span class='text-yellow-200'>commerce_dev</span> została odwołana, ale z równie wielką radością zapraszamy na <span class='text-[#00A5FF]'>PHPers Day</span>, które organizujemy w jej miejsce!"
 no_sales_bull: "NO SALES BULLSHIT, NO MARKETING BINGO. 😈<br>JUST PURE TECH KNOW-HOW."
 
 idea_header: Idea

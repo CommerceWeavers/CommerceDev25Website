@@ -1,6 +1,5 @@
 ---
 import Button from './Button.astro';
-import MobileMenu from './MobileMenu.astro';
 import { Image } from 'astro:assets';
 import hero from '../assets/commerce-logos.png';
 
@@ -13,19 +12,10 @@ if (currentLang === 'en') {
 }
 ---
 
-<MobileMenu />
 <div class="container mx-auto px-8 md:mb-16">
-    <div class="relative py-10 md:py-24">
-        <div id="countdown" class="text-2xl md:text-4xl 2xl:text-5xl mb-8 xxl:mb-14">
-            <div class="text-2xl md:text-4xl 2xl:text-5xl mb-8 xxl:mb-14">
-                00 <span class="text-yellow-200">d <span class="font-extralight">/</span> </span>
-                00 <span class="text-yellow-200">h <span class="font-extralight">/</span> </span>
-                00 <span class="text-yellow-200">m </span>
-            </div>
-        </div>
-        <div class="text-5xl md:text-7xl 2xl:text-7xl mb-4 uppercase max-w-2xl">{str.frontmatter.slogan}</div>
-        <div class="mb-10 md:mb-16">23.05.2025  <span class="text-yellow-200">/ MTP  POZNAŃ  PL</span></div>
-        <Button href="#" variant="primary" disabled={true}>{str.frontmatter.buy_ticket}<span class="text-xs pl-2">{str.frontmatter.soon}</span></Button>
+    <div class="relative py-10 md:pb-24 md:pt-36">
+        <div class="text-3xl md:text-4xl mb-12 uppercase max-w-2xl" set:html={str.frontmatter.slogan}></div>
+        <Button href="#" variant="phpers" disabled={true}>{str.frontmatter.buy_ticket}<span class="text-xs pl-2">{str.frontmatter.soon}</span></Button>
         <div class="hero-border"></div>
         <div class="hero-img hidden xl:block"><Image src={hero} alt="commerce_dev" /></div>
     </div>
