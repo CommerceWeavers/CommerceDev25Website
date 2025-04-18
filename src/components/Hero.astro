@@ -15,7 +15,7 @@ if (currentLang === 'en') {
 <div class="container mx-auto px-8 md:mb-16">
     <div class="relative py-10 md:pb-24 md:pt-36">
         <div class="text-3xl md:text-4xl mb-12 uppercase max-w-2xl" set:html={str.frontmatter.slogan}></div>
-        <Button href="#" variant="phpers" disabled={true}>{str.frontmatter.buy_ticket}<span class="text-xs pl-2">{str.frontmatter.soon}</span></Button>
+        <Button href="https://phpers.day" variant="phpers">{str.frontmatter.buy_ticket}</Button>
         <div class="hero-border"></div>
         <div class="hero-img hidden xl:block"><Image src={hero} alt="commerce_dev" /></div>
     </div>
